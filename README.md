@@ -1,1 +1,66 @@
-# MyTraditionTeller
+# MyTraditionTeller!
+Most of the times, children do not have safe workspaces or environments to explore the basic functionalities from computers. This happens either because parents do not trust or allow their kids to user their own devices, due to fear they might break them.
+
+This where MyTraditionTeller comes in! We have to main objectives:
+* Develop mechanic abilities for basic computer interaction, such as drag n’ drop, or general usage of keyboard and mouse.
+* Learn about our traditions by playing with activities related to a specific tradition from our country or region, in family or alone.
+
+
+### Why MyTraditionTeller?
+We are an open source library where you can create activities, add styles related to a specific topic and teach/learn traditions. We provide the basic tools for an empty frame and examples of how you can develop activities for your traditions.
+
+
+### Who can use MyTraditionTeller?
+Ok, so there are two ways you can use MyTraditionTeller:
+* Learner: download and start learning about your/others’ traditions!
+* Developers: help us and develop more activities and more fun for the community! 
+
+
+### How can I use MyTraditionTeller? (Learner)
+You can download and install everything you need to start learning about your/others traditions. At the “activities” folder you will find subfolders with the names of several countries (or at least Mexico haha) with activities within, ready to run. The recommended ages for the activities are kids between 5 and 7 y/o. The idea is that the activities take no longer than 15 minutes to perform.
+
+
+### How can I contribute to MyTraditionTeller? (Developer)
+It’s easy :)
+You can add a folder for your country/region inside the traditions folder, in case it does not exist yet, and a subfolder with the name of your tradition (with underscores). Inside it, you can create all your setup and theme for your tradition (checkout our Dia de Muertos example). When you are done, create your pull request and we will gladly add it to the activities library.
+
+IMPORTANT (BEFORE YOU START)
+The idea is that the activities take no longer than 15 minutes to perform, and they are targeted for kids between 5-7 y/o. Please validate them before the pull request.
+
+
+```
+traditions 
+│ 
+└─── mexico 
+    └───dia_de_muertos
+ 	    │ menu.js
+ 	    │ activity1.js
+ 	    │ activity2.js
+ 	    │ ... 
+```
+
+
+Installation
+============
+how to install
+
+
+Documentation
+============
+something boring
+
+
+Code Examples
+============
+something cool
+
+
+Other cool resources
+============
+During our process of research, we made a cool mood board in Pinterest, in case you are wondering how did we imagine the UI:
+* [MyTraditionTeller UI](https://www.pinterest.com.mx/gvelascomacias/once-upon-a-sandbox/)
+
+
+License
+============
+This project is licensed under the [MIT license](https://github.com/FranciscoRobles/MyTraditionTeller/blob/master/LICENSE).
