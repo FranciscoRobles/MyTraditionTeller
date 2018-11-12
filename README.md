@@ -42,12 +42,23 @@ traditions
 
 Installation
 ============
-how to install
+Download the repository
 
 
 Documentation
 ============
-something boring
+Executive Summary
+Brief description of project
+A way for kids to learn how to perform basic actions on a computer. It will be a web application that saves the progress of the kid, and encourages them to keep growing, playing and learning about customs.
+
+
+Project Objectives
+What the expectations are
+We have two main objectives: reinforcing the basic mechanics of computers to kids(things like drag and drop, copy and paste commands, etc.); and teaching them about traditions.
+
+Project Scope
+The reach for the semester
+By the end of the semester we plan on having the architecture of the stories up on Github, so that anyone that wants to create their own stories about their traditions they are able to do so. Also, we’ll have a one activity, plus a way to sign up/in so that the progress of the child is saved.
 
 
 Code Examples
