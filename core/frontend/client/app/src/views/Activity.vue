@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .activity {
   width: calc(100% - 10px);
   display: inline-flex;
@@ -27,6 +27,17 @@
   }
   .col-5 {
     width: 50%;
+  }
+  .col-3, .col-4, .col-5 {
+    div h1 {
+      font-size: 30px;
+      width: calc(100% - 10px);
+      background: #f7931e;
+      border-radius: 5px;
+      padding: 10px 0;
+      color: #fff;
+      margin: 10px;
+    }
   }
 }
 

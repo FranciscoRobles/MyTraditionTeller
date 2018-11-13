@@ -27,7 +27,10 @@ export default class Story extends Vue {
   height: calc(80vh - 200px);
   input {
     width: calc(100% - 30px);
+    height: calc(100% - 28px);
     margin: 10px 14px;
+    font-size: 14px;
+	  top: -1px;
   }
 }
 </style>

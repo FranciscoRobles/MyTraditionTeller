@@ -2,18 +2,35 @@
   <div>
     <h1>Canvas</h1>
     <div class="canvas-wrapper">
-      <canvas></canvas>
+      <canvas id="canvas"></canvas>
     </div>
   </div>
 </template>
+<script type="application/javascript">
+  console.log("Holi");
+  $('canvas')
+    .drawArc({
+      layer: true,
+      draggable: true,
+      fillStyle: '#36c',
+      x: 150, y: 150,
+      radius: 50
+    })
+    .drawRect({
+      layer: true,
+      draggable: true,
+      fillStyle: '#6c1',
+      x: 100, y: 100,
+      width: 100, height: 100
+    });
+</script>
+
+
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Vue, Component } from 'vue-property-decorator';
 @Component
-export default class Canvas extends Vue {
-  
-}
-
+export default class Canvas extends Vue {}
 </script>
 
 <style scoped lang="scss">

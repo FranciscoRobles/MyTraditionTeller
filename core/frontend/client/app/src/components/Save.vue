@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="story-wrapper">
-      <button>Guardar</button>
-      <button>Descargar</button>
+    <div class="save-wrapper">
+      <button id="save">Guardar</button>
+      <button id="download">Descargar</button>
     </div>
   </div>
 </template>
@@ -20,14 +20,23 @@ export default class Save extends Vue {
 .save-wrapper {
   margin: 10px;
   display: inline-block;
-  background: white;
-  border: 1px solid white;
   border-radius: 5px; 
   width: calc(100% - 20px);
   height: calc(20vh - 200px);
   button {
-    width: calc(100% - 30px);
-    margin: 10px 14px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px 0;
+    &#save {
+      background: #0071bc;
+    }
+    &#download {
+      background: #39b54a;
+    }
   }
 }
 </style>
