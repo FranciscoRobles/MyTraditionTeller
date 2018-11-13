@@ -52,7 +52,7 @@ export default class RoutesElements {
         });
         if(response.ok){
             var json = await response.json();
-            return json as element;
+            return json as string;
         }
     }
 
