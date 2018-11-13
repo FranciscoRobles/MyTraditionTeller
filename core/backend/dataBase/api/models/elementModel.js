@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var ElementSchema = new Schema({
   id:{
     type: String,
-    required: 'ID Usuario'
+    required: 'ID Elemento'
   },
   nombre: {
     type: String,

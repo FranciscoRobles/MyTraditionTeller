@@ -5,14 +5,30 @@
       <img src="../assets/elements/elements01.png" alt="el-01">
       <img src="../assets/elements/elements02.png" alt="el-02">
       <img src="../assets/elements/elements03.png" alt="el-03">
+      <button v-on:click="fetchAll()" ></button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import RoutesElements from '../clients/RoutesElements';
+
 @Component
-export default class Elements extends Vue { }
+export default class Elements extends Vue { 
+  routesElements: RoutesElements = new RoutesElements()
+  fetchAll(){
+    return new Promise<any>((resolved, rejected) =>{
+      let promise = this.routesElements.Elements()
+        .then( results => {
+          console.log(results);
+        })
+
+
+    })
+  }
+
+}
 </script>
 
 <style scoped lang="scss">
