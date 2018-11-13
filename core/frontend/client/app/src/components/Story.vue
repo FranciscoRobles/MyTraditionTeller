@@ -2,7 +2,7 @@
   <div>
     <h1>Story</h1>
     <div class="story-wrapper">
-      <input type="text">
+      <textarea type="text"></textarea>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default class Story extends Vue {
   border-radius: 5px; 
   width: calc(100% - 20px);
   height: calc(80vh - 200px);
-  input {
+  textarea {
     width: calc(100% - 30px);
     height: calc(100% - 28px);
     margin: 10px 14px;

@@ -2,9 +2,9 @@
   <div>
     <h1>Elements</h1>
     <div class="elements-wrapper">
-      <img src="../assets/elements/elements01.png" alt="el-01">
-      <img src="../assets/elements/elements02.png" alt="el-02">
-      <img src="../assets/elements/elements03.png" alt="el-03">
+      <img class="draggable" src="../assets/elements/elements01.png" alt="elements01">
+      <img class="draggable" src="../assets/elements/elements02.png" alt="elements02">
+      <img class="draggable" src="../assets/elements/elements03.png" alt="elements03">
     </div>
   </div>
 </template>

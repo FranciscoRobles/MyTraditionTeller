@@ -8,7 +8,6 @@
     </div>
     <div class="col-3">
       <Story/>
-      <Save/>
     </div>
   </div>
 </template>
@@ -60,6 +59,8 @@ import Save from '@/components/Save.vue';
     Save,
   },
 })
-export default class Activity extends Vue {}
+export default class Activity extends Vue {
+
+}
 
 </script>

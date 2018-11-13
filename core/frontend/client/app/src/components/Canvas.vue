@@ -2,35 +2,19 @@
   <div>
     <h1>Canvas</h1>
     <div class="canvas-wrapper">
-      <canvas id="canvas"></canvas>
+      <iframe src="./mycanvas.html" frameborder="0"></iframe>
     </div>
   </div>
 </template>
-<script type="application/javascript">
-  console.log("Holi");
-  $('canvas')
-    .drawArc({
-      layer: true,
-      draggable: true,
-      fillStyle: '#36c',
-      x: 150, y: 150,
-      radius: 50
-    })
-    .drawRect({
-      layer: true,
-      draggable: true,
-      fillStyle: '#6c1',
-      x: 100, y: 100,
-      width: 100, height: 100
-    });
-</script>
-
-
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
+import JQuery from 'jquery';
+import JCanvas from 'jcanvas';
+
 @Component
-export default class Canvas extends Vue {}
+export default class Canvas extends Vue { }
+
 </script>
 
 <style scoped lang="scss">
@@ -42,9 +26,9 @@ export default class Canvas extends Vue {}
   border-radius: 5px; 
   width: calc(100% - 20px);
   height: calc(100vh - 200px);
-  canvas {
-    width: calc(100% - 30px);
-    margin: 10px 14px;
+  iframe {
+    width: 100%;
+    height: 100%;
   }
 }
 </style>

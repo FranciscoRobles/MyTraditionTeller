@@ -2,7 +2,7 @@
   <div>
     <div class="save-wrapper">
       <button id="save">Guardar</button>
-      <button id="download">Descargar</button>
+      <button id="download" >Descargar</button>
     </div>
   </div>
 </template>
@@ -10,9 +10,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
-export default class Save extends Vue {
-  
-}
+export default class Save extends Vue { }
 
 </script>
 
