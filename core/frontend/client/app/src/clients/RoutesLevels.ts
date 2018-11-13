@@ -9,8 +9,22 @@ export default class RoutesLevels {
         return null;
     }
 
-    async CreateLevel(){
-        var response = await fetch("http://localhost:3000/createLevel");
+    async CreateLevel(level: level){
+        var response = await fetch("http://localhost:3000/createLevel", {
+        method: "POST",
+        headers:{
+            "Content-Type": "applicaction/json"
+        },
+        body: JSON.stringify(level)
+        });
+        if(response.ok){
+           var json = await response.json();
+           return json as level;
+        }
+    }
+
+    async FindLevel(levelID: string){
+        var response = await fetch("http://localhost:3000/findLevel?id="+ levelID);
         if(response.ok){
             var json = await response.json();
             return json as string;
@@ -18,30 +32,27 @@ export default class RoutesLevels {
         return null;
     }
 
-    async FindLevel(){
-        var response = await fetch("http://localhost:3000/findLevel");
+    async UpdateLevel(id:string, level:level){
+        var response = await fetch("http://localhost:3000/updateLevel?id="+id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(level)
+        });
         if(response.ok){
             var json = await response.json();
-            return json as string;
+            return json as level;
         }
-        return null;
     }
 
-    async UpdateLevel(){
-        var response = await fetch("http://localhost:3000/updateLevel");
+    async DeleteLevel(id: string){
+        var response = await fetch("http://localhost:3000/deleteLevel?id="+ id{
+            method: "DELETE"
+        });
         if(response.ok){
             var json = await response.json();
             return json as string;
         }
-        return null;
-    }
-
-    async DeleteLevel(){
-        var response = await fetch("http://localhost:3000/deleteLevel");
-        if(response.ok){
-            var json = await response.json();
-            return json as string;
-        }
-        return null;
     }
 }
