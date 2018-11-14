@@ -54,14 +54,22 @@ export default class ConnectApi extends Vue {
   routesElements: RoutesElements = new RoutesElements();
   routesStory: RoutesStories = new RoutesStories()
 
-  level: any = { }
+  level: any = { 
+    id: "1",
+    historia: "blabla"
+  }
   element: any = {
+    id: "1",
     nombre: "papaya",
     imagen: "../assets/elements/elements01.png",
     coordenadaX: "4",
     coordenadaY: "45",
   }
-  story: any = { }
+  story: any = {
+    id: "1",
+    string: "Papaya",
+    nivel: "2"
+   }
 
 
   // Level 
