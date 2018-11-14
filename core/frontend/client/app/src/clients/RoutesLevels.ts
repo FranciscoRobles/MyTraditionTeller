@@ -24,7 +24,7 @@ export default class RoutesLevels {
     }
 
     async FindLevel(levelID: string){
-        var response = await fetch("http://localhost:3000/findLevel?id="+ levelID);
+        var response = await fetch("http://localhost:3000/findLevel?id=" + levelID);
         if(response.ok){
             var json = await response.json();
             return json as string;
@@ -33,7 +33,7 @@ export default class RoutesLevels {
     }
 
     async UpdateLevel(id:string, level:level){
-        var response = await fetch("http://localhost:3000/updateLevel?id="+id, {
+        var response = await fetch("http://localhost:3000/updateLevel?id=" + id, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -47,7 +47,7 @@ export default class RoutesLevels {
     }
 
     async DeleteLevel(id: string){
-        var response = await fetch("http://localhost:3000/deleteLevel?id="+ id{
+        var response = await fetch("http://localhost:3000/deleteLevel?id=" + id, {
             method: "DELETE"
         });
         if(response.ok){

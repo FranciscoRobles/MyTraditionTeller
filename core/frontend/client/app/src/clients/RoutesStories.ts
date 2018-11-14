@@ -32,7 +32,7 @@ export default class RoutesStories {
         }
     }
 
-    async EditStories(id:string, story: story ){
+    async UpdateStory(id:string, story: story){
         var response = await fetch("http://localhost:3000/updateStory?id="+ id, {
             method: "PUT",
             headers: {

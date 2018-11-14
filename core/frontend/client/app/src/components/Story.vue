@@ -3,67 +3,16 @@
     <h1>Story</h1>
     <div class="story-wrapper">
       <textarea type="text"></textarea>
-      <div class="menu-wrapper">
-        <router-link to="/activity">Activity</router-link>
-          <button v-on:click="fetchAll()" >Fetch All</button>
-          <button v-on:click="createStory()" >Create Story</button>
-          <button v-on:click="findStory('1')" >Find Story</button>
-          <button v-on:click="updateStory('1')" >Update Story</button>
-          <button v-on:click="Story('69')" >Delete Story</button>
-      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import RoutesStories from '../clients/RoutesStories';
+
 @Component
-export default class Story extends Vue {
-  routesStories: RoutesStories = new RoutesStories()
-  story: story = {
-    
-  }
-  fetchAll(){
-    return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStory.Stories()
-        .then( results => {
-          console.log(results):
-        })
-    })
-  }
-  createStory(story: story){
-    return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStory.createStory(this.story)
-        .then( results => {
-          console.log(results):
-        })
-    })
-  }
-  findStory(id: string){
-    return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStory.findStory(id)
-        .then( results => {
-          console.log(results):
-        })
-    })
-  }
-  updateStory(id: string, story: story){
-    return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStories.updateStory(id, this.story)
-        .then( results => {
-          console.log(results):
-        })
-    })
-  }
-  deleteStory(id: string){
-    return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStories.deleteStory(id)
-        .then( results => {
-          console.log(results):
-        })
-    })
-  }
-}
+export default class Story extends Vue { }
 
 </script>
 
