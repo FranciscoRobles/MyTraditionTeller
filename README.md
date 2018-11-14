@@ -40,11 +40,6 @@ traditions
 ```
 
 
-Installation
-============
-Download the repository
-
-
 Documentation
 ============
 Executive Summary
@@ -60,11 +55,45 @@ Project Scope
 The reach for the semester
 By the end of the semester we plan on having the architecture of the stories up on Github, so that anyone that wants to create their own stories about their traditions they are able to do so. Also, we’ll have a one activity, plus a way to sign up/in so that the progress of the child is saved.
 
-
-Code Examples
+Installation  
 ============
-something cool
+Download the repository and check the following sections to run both frontend and backend.
 
+Installing and running Frontend  
+============
+Requirements for the Frontend to run:
+* Have Node.js
+
+Open the folder core/frontend and run the following:
+```
+npm install	
+npm run serve
+```
+
+Installing the Backend and using the API
+============
+Requirements for the API to run:
+* Have Mongo installed and running
+* Have Node.js
+After you have that, go inside the folder: core/backend/database
+```
+npm install	
+node .
+```
+Now that you have the server running you can access it from the client side, on the route: core/frontend/client/app/src/clients there are three files that can be used to access the API (do not move anything from those files).
+Here’s how you use them, inside the file you want to use them you first import it. For example:
+	import RoutesElements from '../clients/RoutesElements';
+ Then in the component you initialize it 
+	routesElements: RoutesElements = new RoutesElements();
+And now with a simple promise you can access any of the endpoints.
+Each one of the files has have endpoints:
+* One GET for all of the elements/levels/stories.
+* One GET for one element/level/story.
+* One DELETE.
+* One POST.
+* One PUT.
+
+For more information on each file, you can go and check out the file to see exactly what you need.
 
 Other cool resources
 ============
