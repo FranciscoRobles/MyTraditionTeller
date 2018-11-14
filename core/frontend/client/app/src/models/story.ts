@@ -1,0 +1,3 @@
+interface story {
+    content: string
+}
