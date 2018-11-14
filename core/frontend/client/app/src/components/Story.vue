@@ -7,9 +7,9 @@
           <router-link to="/activity">Activity</router-link>
             <button v-on:click="fetchAll()" >Fetch All</button>
             <button v-on:click="createStory()" >Create Story</button>
-            <button v-on:click="findStory('1')" >Find Story</button>
-            <button v-on:click="updateStory('1')" >Update Story</button>
-            <button v-on:click="Story('69')" >Delete Story</button>
+            <button v-on:click="findStory('5')" >Find Story</button>
+            <button v-on:click="updateStory('5')" >Update Story</button>
+            <button v-on:click="deleteStory('6')" >Delete Story</button>
         </div>
     </div>
   </div>
@@ -17,48 +17,52 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import RoutesStories from '../clients/RoutesStories'
+
 @Component
 export default class Story extends Vue {
-    routesStories: RoutesStories = new RoutesStories()
+    routesStory: RoutesStories = new RoutesStories()
   story: story = {
+    string: "papaya de celaya",
+    nivel: "2"
   }
   fetchAll(){
     return new Promise<any>((resolved, rejected) =>{
       let promise = this.routesStory.Stories()
         .then( results => {
-          console.log(results):
+          console.log(results);
         })
     })
   }
   createStory(story: story){
     return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStory.createStory(this.story)
+      let promise = this.routesStory.CreateStory(this.story)
         .then( results => {
-          console.log(results):
+          console.log(results);
         })
     })
   }
   findStory(id: string){
     return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStory.findStory(id)
+      let promise = this.routesStory.FindStory(id)
         .then( results => {
-          console.log(results):
+          console.log(results);
         })
     })
   }
   updateStory(id: string, story: story){
     return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStories.updateStory(id, this.story)
+      let promise = this.routesStory.EditStories(id, this.story)
         .then( results => {
-          console.log(results):
+          console.log(results);
         })
     })
   }
   deleteStory(id: string){
     return new Promise<any>((resolved, rejected) =>{
-      let promise = this.routesStories.deleteStory(id)
+      let promise = this.routesStory.DeleteStory(id)
         .then( results => {
-          console.log(results):
+          console.log(results);
         })
     })
   }

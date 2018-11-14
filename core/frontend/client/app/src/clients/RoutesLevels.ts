@@ -47,7 +47,7 @@ export default class RoutesLevels {
     }
 
     async DeleteLevel(id: string){
-        var response = await fetch("http://localhost:3000/deleteLevel?id="+ id{
+        var response = await fetch("http://localhost:3000/deleteLevel?id="+ id, {
             method: "DELETE"
         });
         if(response.ok){
